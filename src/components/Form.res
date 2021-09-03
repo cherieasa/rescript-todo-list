@@ -1,5 +1,5 @@
 @react.component
-let make = (~setInputText, ~inputText, ~todos, ~setTodos, ~setStatus) => {
+let make = (~inputText, ~setInputText, ~todos, ~setTodos, ~setStatus) => {
     
     let inputTextHandler = (evt) => {
         let value = ReactEvent.Form.target(evt)["value"]
@@ -17,7 +17,15 @@ let make = (~setInputText, ~inputText, ~todos, ~setTodos, ~setStatus) => {
         setStatus(_ => value);
     };
 
+    let clearHandler = (evt) => {
+        ReactEvent.Mouse.preventDefault(evt);
+        setTodos(_ => [])
+    }
+
     <form>
+        <button onClick={clearHandler} className="clear" type_="submit">
+            (React.string("Clear"))
+        </button>
         <input value={inputText} onChange={inputTextHandler} type_="text" className="todo-input" />
         <button onClick={submitTodoHandler} className="todo-button" type_="submit">
             <i className="fas fa-plus-square"></i>

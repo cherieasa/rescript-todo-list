@@ -58,4 +58,5 @@ module Todo = {
     let filterUncomplete = (todos) => {
         Js.Array.filter( todo => {todo.completed === false}, todos) 
     };
+    
 }

@@ -34,7 +34,7 @@ form button {
 }
 form button {
   color: #4d4d4d;
-  background: #f7fffe;
+  background: white;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -68,6 +68,22 @@ form button:hover {
 }
 .todo li {
   flex: 1;
+}
+
+.clear {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  color: #4d4d4d;
+  border: none;
+  background: white;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 .trash-btn,
