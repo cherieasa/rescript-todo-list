@@ -17,7 +17,6 @@ module Storage = {
         }
         
         // Js.log(arrayOftodoArray) /// [["1","dothis","true"], ...]
-
         // Js.Array.joinWith("-", ["1","dothis","true"]) -> Js.log   /// 1-dothis-true
 
     };
@@ -33,18 +32,9 @@ module Storage = {
         let todosStr = Dom.Storage.getItem("todos", Dom.Storage.localStorage)
         
         let todos = todosStr->Belt.Option.map(parseIntoMyData)
-        Js.log3("get local todos", todosStr, todos)
+        // Js.log3("get local todos", todosStr, todos)
         todos
-        // if (Dom.Storage.getItem("todos", Dom.Storage.localStorage) === None){
-        //     Dom.Storage.setItem("todos", "[]", Dom.Storage.localStorage);
-        //     Js.log(Dom.Storage.localStorage)
-        // } else {
-        //     let todoLocal = Dom.Storage.getItem("todos", Dom.Storage.localStorage);
-        //     switch(todoLocal){
-        //         | Some(s) => setTodos(_ => parseIntoMyData(s))
-        //         | None => ()
-        //     }
-        // }
+
     };
 
 }

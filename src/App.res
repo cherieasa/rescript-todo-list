@@ -24,7 +24,7 @@ let make = () => {
     // let todos = UtilStorage.Storage.getLocalTodos()->Belt.Option.getWithDefault([]);
     // setTodos(_ => todos)
     UtilStorage.Storage.saveLocalTodos(todos);
-    Js.log2("save todos", todos)
+    // Js.log2("save todos", todos)
     None
   }, (todos, status));
   
